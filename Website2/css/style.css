@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pfont:18px;
+    --h1font:35px;
+    --si1:url('/images/desktop-image-hero-1.jpg');
+    --si2:url('/images/desktop-image-hero-2.jpg');
+    --si3:url('/images/desktop-image-hero-3.jpg')
+}
+.navigation{
+    display: inline-block;
+}
+.navigation a{
+    color: #fff;
+    font-size: var(--pfont);
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+    
+}
+.navigation a:hover{
+    text-decoration: underline;
+}
+.hambg{
+        height:7%;
+        width: 5%;
+        background-image: url('/images/round_menu_white_24dp.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        left: 90%;
+        top: -8%;
+        display: none;
+}
+.close{
+    height:7%;
+    width: 5%;
+    background-image: url('/images/outline_close_white_24dp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 90%;
+    top: -8%;
+    display: none;
+}
+.logo{
+    color: #fff;
+    font-size: var(--h1font);
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+  .slidercomp{
+      width: 100%;
+      height: 100%;
+  }
+  .slidertext{
+      width: 40%;
+      height: 100%;
+      position: relative;
+      left: 60%;
+      top: -100%;
+      z-index: 2;
+  }
+.slidertext h1{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    top: 30%;
+    text-align: center;
+    font-size:var(--h1font);
+}
+.slidertext p{
+    position: relative;
+    width: 80%;
+    top: 35%;
+    margin: auto;
+    text-align:justify;
+    color: rgba(0, 0, 0, 0.746);
+    line-height: 1.3;
+    font-size: var(--pfont);
+}
+  .sliderimg{
+      width: 60%;
+      height: 100%;
+    }
+    #sliderimg1
+    {
+        background-image:var(--si1) ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #sliderimg2
+    {
+        background-image: var(--si2);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #sliderimg3
+    {
+        background-image: var(--si3);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .btns{
+        position: absolute;
+        height: 65px;
+        width: 100px;
+        background-color: black;
+        top: 85%;
+        left: 60%;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .prev{
+        color: #fff;
+        display: inline-block;
+        height: 100%;
+        width: 50%;
+        font-size: var(--h1font);
+        text-align: center;
+        cursor: pointer;
+    }
+    .prev:hover{
+        opacity: 50%;
+    }
+    .next{
+        height: 100%;
+        width: 46%;
+        color:#fff;
+        display: inline-block;
+        font-size: var(--h1font);
+        text-align: center;
+        cursor: pointer;
+    }
+    .next:hover{
+        opacity: 50%;
+    }
+.main-container{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+    overflow: hidden;
+    grid-template-columns:30% 40% 30%;
+    grid-template-rows: 60vh 40vh;
+}
+.container1{
+    grid-area: 1/1/1/4;
+    overflow: hidden;
+}
+.container2{
+    background-image: url('../images/image-about-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.container3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+.content h1{
+    position: relative;
+    top: 30%;
+    text-align: left;
+    font-size:var(--h1font);
+}
+.content p{
+    position: relative;
+    top: 35%;
+    text-align:left;
+    color: rgba(0, 0, 0, 0.746);
+    line-height: 1.3;
+    font-size: var(--pfont);
+}
+.container4{
+    background-image: url('../images/image-about-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+@media only screen and (max-width: 600px)/*size for phones*/
+{
+    :root{
+        --pfont:13px;
+        --h1font:25px;
+        --si1:url('/images/mobile-image-hero-1.jpg');
+        --si2:url('/images/mobile-image-hero-2.jpg');
+        --si3:url('/images/mobile-image-hero-3.jpg')
+    }
+    .sliderimg{
+        width: 100%;
+        height: 50%;
+      }
+    .slidertext{
+        width: 100%;
+        height: 50%;
+        position: static;
+    }
+    .btns{
+        height: 45px;
+        width: 100px;
+        top: 40%;
+        left: 73%;
+        
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation{
+        width: 100%;
+        height: 40%;
+        position: relative;
+        bottom: 25%;
+        background-color:rgb(133, 115, 16);
+    }
+    .navigation a{
+        color: #000;
+        font-size: var(--h1font);
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: 35%;
+    }    
+    .hambg{
+        display: block;
+    }
+      .close{
+          top: -45%;
+          color: #000;
+      }
+    .main-container{
+        grid-template-rows: 50vh 50vh 50vh 50vh 50vh;
+    }
+    .container1{
+        grid-area: 1/1/3/4;
+    }
+    .container2{
+        grid-area:3/1/4/4;
+    }
+    .container3{
+        grid-area:4/1/5/4;
+    }
+    .container4{
+        grid-area:5/1/6/4;
+    }
+}
+@media only screen and (min-width:601px) and (max-width:768px)/*size for large phones and medium tablets*/
+{
+    :root{
+        --pfont:15px;
+        --h1font:28px;
+        --si1:url('/images/mobile-image-hero-1.jpg');
+        --si2:url('/images/mobile-image-hero-2.jpg');
+        --si3:url('/images/mobile-image-hero-3.jpg')
+    }
+    .sliderimg{
+        width: 100%;
+        height: 50%;
+      }
+    .slidertext{
+        width: 100%;
+        height: 50%;
+        position: static;
+    }
+    .btns{
+        height: 47px;
+        width: 100px;
+        top: 45%;
+        left: 75%;
+        
+    }
+    .navigation{
+        display: none;
+    }
+    .navigation{
+        width: 100%;
+        height: 40%;
+        position: relative;
+        bottom: 25%;
+        background-color:rgb(133, 115, 16);
+    }
+    .navigation a{
+        color: #000;
+        font-size: var(--h1font);
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: 50%;
+    }    
+    .hambg{
+        display: block;
+    }
+
+    .close{
+        top: -45%;
+        color: #000;
+    }
+
+    .main-container{
+        grid-template-rows: 60vh 50vh 50vh 50vh;
+        grid-template-columns:25% 25% 25% 25%;
+    }
+    .container1{
+        grid-area: 1/1/3/5;
+    }
+    .container2{
+        grid-area:3/1/4/5;
+    }
+    .container3{
+        grid-area:4/1/4/3;
+    }
+    .container4{
+        grid-area:4/3/4/5;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1050px)/*size for large tablets small laptops or lanscaps*/
+{
+    :root{
+        --pfont:18px;
+        --h1font:35px;
+        --si1:url('/images/mobile-image-hero-1.jpg');
+        --si2:url('/images/mobile-image-hero-2.jpg');
+        --si3:url('/images/mobile-image-hero-3.jpg')
+    }
+    
+
+    .main-container{
+        grid-template-rows: 60vh 50vh 50vh 50vh;
+        grid-template-columns:25% 25% 25% 25%;
+    }
+    .container1{
+        grid-area: 1/1/3/5;
+    }
+    .container2{
+        grid-area:3/1/4/5;
+    }
+    .container3{
+        grid-area:4/1/4/3;
+    }
+    .container4{
+        grid-area:4/3/4/5;
+    }
+}
